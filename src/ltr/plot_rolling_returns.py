@@ -2,7 +2,7 @@ import ltr.lib
 import matplotlib.pyplot as plt
 
 def main(holding_years):
-    data = ltr.lib.load_data()
+    data = ltr.lib.load_accumulation_index()
 
     rolling_annual_returns = ltr.lib.rolling_annual_returns(
         data, args.holding_years

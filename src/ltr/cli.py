@@ -1,5 +1,5 @@
 import click
-import ltr.plot_log_prices
+import ltr.plot_accumulation
 import ltr.plot_rolling_returns
 
 
@@ -9,8 +9,8 @@ def main():
 
 
 @main.command()
-def plot_log_prices():
-    ltr.plot_log_prices.main()
+def plot_accumulation():
+    ltr.plot_accumulation.main()
 
 
 @main.command()

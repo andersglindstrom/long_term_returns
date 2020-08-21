@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def load_data():
+def load_accumulation_index():
     with resources.open_text("ltr", "sp500tr.csv") as data_file:
         data = pd.read_csv(data_file).set_index("Year").sort_index()/100
     return data.TotalReturn
