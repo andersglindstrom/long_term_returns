@@ -18,6 +18,8 @@ def rolling_annual_returns(data, holding_years, last_year=None):
     rolling_final_value = rolling_final_value.dropna()
     rolling_annual_return = np.log(rolling_final_value)/holding_years
 
+    # new_index = data.index[:(-holding_years+1)]
+
     rolling_annual_return.index = data.index[:-holding_years+1]
 
     if last_year:

@@ -14,6 +14,6 @@ def plot_accumulation():
 
 
 @main.command()
-@click.argument("holding-years", type=int)
+@click.argument("holding-years", type=click.IntRange(min=2))
 def plot_rolling_returns(holding_years):
     ltr.plot_rolling_returns.main(holding_years)
