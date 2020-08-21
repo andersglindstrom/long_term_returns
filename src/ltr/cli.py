@@ -2,6 +2,7 @@ import click
 import ltr.plot_accumulation
 import ltr.plot_rolling_returns
 import ltr.plot_holding_period_distribution
+import ltr.plot_holding_period_analysis
 
 
 @click.group()
@@ -24,3 +25,8 @@ def plot_rolling_returns(holding_years):
 @click.argument("holding-years", type=click.IntRange(min=2))
 def plot_holding_period_distribution(holding_years):
     ltr.plot_holding_period_distribution.main(holding_years)
+
+
+@main.command()
+def plot_holding_period_analysis():
+    ltr.plot_holding_period_analysis.main()
